@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>404</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:200,700&display=swap" rel="stylesheet"><link rel='stylesheet' href='https://unpkg.com/backpack.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="app"></div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/react/16.9.0/umd/react.production.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.9.0/umd/react-dom.production.min.js'></script><script  src="./script.js"></script>
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Fake virus only with html</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title></title>
+  <style>
+    /* I stole Ralph from Jason Delia https://codepen.io/jasonadelia/pen/xpwmq */
+
+    #ralph {
+      position: fixed;
+      display: none;
+      font-size: 14px;
+      height: 40em;
+      width: 40em;
+      background-image: url("niilo.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      filter: hue-rotate(60deg);
+    }
+  </style>
+</head>
+<body>
+  <div id="ralph"></div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/react/16.9.0/umd/react.production.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.9.0/umd/react-dom.production.min.js'></script>
+  <script>
+    const body = document.getElementsByTagName("body")[0];
+    const ralph = document.getElementById("ralph");
+
+    function duplicateRalphAtRandomPosition() {
+      const ralphClone = ralph.cloneNode(true);
+      ralphClone.style.display = "block";
+      ralphClone.style.position = "fixed";
+      ralphClone.style.top = getRandomPercentage();
+      ralphClone.style.left = getRandomPercentage();
+      ralphClone.style.transform = `scale(${getRandomSize()})`;
+      ralphClone.style.animation = "color 3s infinite linear";
+      body.appendChild(ralphClone);
+    }
+
+    function getRandomPercentage() {
+      return Math.random() * 60 + "%";
+    }
+
+    function getRandomSize() {
+      return Math.random() * 0.8 + 0.5;
+    }
+
+    setInterval(function() {
+      duplicateRalphAtRandomPosition();
+    }, 2000);
+  </script>
+</body>
+</html>
