@@ -20,6 +20,8 @@ h1 {
   margin: 0;
   font-weight: 600;
   line-height: 1.15;
+  position: relative;
+  z-index: 999;
 }
 @media (min-width: 900px) {
   h1 {
@@ -32,6 +34,8 @@ h2 {
   margin: 0.5rem 0;
   line-height: 1.15;
   font-weight: 200;
+  position: relative;
+  z-index: 999;
 }
 @media (min-width: 900px) {
   h2 {
@@ -42,6 +46,8 @@ h2 {
 
 p {
   margin-top: 0.25rem;
+  position: relative;
+  z-index: 999;
 }
 @media (min-width: 900px) {
   p {
